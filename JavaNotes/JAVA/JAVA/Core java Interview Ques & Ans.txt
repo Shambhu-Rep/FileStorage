@@ -1,0 +1,273 @@
+1. Single Inheritance code
+public class A{}
+public class B extends A{}
+
+2.Method Overloading code
+public class A{
+public void studDetail(int id){}
+public void studDetail(String name,long phno){}
+public void studDetail(char initial,String name,long phno){}
+}
+
+3.Method Overriding code
+public class A{
+public void empData(){}
+}
+public class B{
+public class B extends A{
+@overrride
+public void empData(){}
+}
+
+4.Interface code
+interface A{}
+interface B{}
+class C implements A,B{}
+
+5.Abstract class code
+puclic abstract class A{
+public abstract void fixedAcc();   //abstract method
+public void savAcc(){}             //Non-abstract method
+}
+public class B extends A{}s
+
+6.Multiple Interface through interface code
+interface A{}
+interface B{}
+class C implements A,B{}
+
+7.Create list and insert value and iterate
+Lis<Integer> li=new ArrayList<Integer>();
+li.add(20);
+li.add(30);
+li.add(40);
+for(int i=0,i<size(),i++){
+System.out.println(li.get(i));
+}
+
+8.Create list and insert value and iterate
+Set<Integer> li=new LinkedHashSet<Integer>();
+li.add(20);
+li.add(30);
+li.add(40);
+for(Integer x:li){
+System.out.println(x);
+}
+
+
+
+9.Create Map and insert value and iterate
+Map<Integer,String> mp=new LinkedHashMap<Integer,String>();
+mp.put(20,"java");
+mp.put(30,"sql");
+mp.put(40,"Selenium");
+Set<Entry<Integer,String>> m=mp.entrySet();
+for(Entry<Integer,String> x:m){
+System.out.println(x);
+}
+
+10.Create Map and insert value and iterate only key
+Map<Integer,String> mp=new LinkedHashMap<Integer,String>();
+mp.put(20,"java");
+mp.put(30,"sql");
+mp.put(40,"Selenium");
+Set<Entry<Integer,String>> m=mp.keySet();
+for(Entry<Integer,String> x:m){
+System.out.println(x.getKey(x));
+}
+
+11.10.Create Map and insert value and iterate only value
+Map<Integer,String> mp=new LinkedHashMap<>();
+mp.put(10,"Java");
+mp.put(20,"selenium");
+mp.put(30,"sql");
+Collection<String> v=new mp.values();
+System.out.println(v);
+
+12.Create usedefined list and insert value and iterate
+public class Employee {
+	private int empId;
+	private String name;
+	private long phno;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getPhno() {
+		return phno;
+	}
+	public void setPhno(long phno) {
+		this.phno = phno;	}
+}       }
+public class Sample {
+	public static void main(String[] args) {
+		List<Employee> li=new ArrayList<Employee>();
+		Employee e=new Employee();
+		e.setEmpId(1234);
+		e.setName("Greens");
+		e.setPhno(9543647348l);
+                li.add(e);
+		for (Employee x : li) {
+			System.out.println(x.getEmpId());
+			System.out.println(x.getName());
+			System.out.println(x.getPhno());
+		}}}
+13.Create usedefined set and insert value and iterate
+public class Employee {
+	private int empId;
+	private String name;
+	private long phno;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getPhno() {
+		return phno;
+	}
+	public void setPhno(long phno) {
+		this.phno = phno;
+	}
+}
+public class Sample {
+	public static void main(String[] args) {
+		Set<Employee> s=new LinkedHashSet<>();
+		Employee e=new Employee();
+		e.setEmpId(1234);
+		e.setName("Greens");
+		e.setPhno(9543647348l);
+                s.add(e);
+		for (Employee x : s) {
+			System.out.println(x.getEmpId());
+			System.out.println(x.getName());
+			System.out.println(x.getPhno());
+		}}}
+14.Create usedefined map and insert value and iterate
+private int empId;
+	private String name;
+	private long phno;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getPhno() {
+		return phno;
+	}
+	public void setPhno(long phno) {
+		this.phno = phno;
+}}
+public class Sample {
+	public static void main(String[] args) {
+		
+		Map<Integer, Employee> mp=new LinkedHashMap<Integer, Employee>();
+		Employee e=new Employee();
+		e.setEmpId(1234);
+		e.setName("Greens");
+		e.setPhno(9543647348l);
+		mp.put(10,e);
+		Set<Entry<Integer, Employee>> s = mp.entrySet();
+		for (Entry<Integer, Employee> x : s) {
+			System.out.println(x.getKey() + " Employee details");
+			System.out.println("Id is : "+x.getValue().getEmpId());
+			System.out.println("Employee name : "+x.getValue().getName());
+			System.out.println("Employee phon number : "+x.getValue().getPhno());
+		}
+		
+	}}
+15.userdefine exception
+
+16.Handle the Exception using try-catch-finally
+public class Demo{
+	public static void main(String[] args) {
+		String empId="20";
+		if(empId.startsWith("3")) {
+			System.out.println("Employee Id is present");
+		}
+		else {
+			try {
+				throw new EmployeeNotFoundException();
+			}
+			catch(EmployeeNotFoundException e){
+				e.printStackTrace();
+			}
+			finally {
+				System.out.println("No Exception");
+}}}
+17.Create constructor and pass the argument
+public class Employee1 {
+	public Employee1(int empId,String name) {
+		System.out.println(empId);
+		System.out.println(name);
+	}
+	public static void main(String[] args) {
+		Employee1 e=new Employee1(10,"Greens");
+	}
+
+}
+18. Create constructor and pass the argument using this
+public class Employee1 {
+	public Employee1(int empId,String name) {
+		System.out.println(empId);
+		System.out.println(name);
+	}
+	public Employee1() {
+		this(10,"Greens");
+	}
+	public static void main(String[] args) {
+		Employee1 e=new Employee1();
+}}}
+
+19.Create constructor and pass the argument using super
+public class Employee1 {
+	public Employee1(int empId,String name) {
+		System.out.println(empId);
+		System.out.println(name);
+	}}
+public class Cons extends Employee1 {
+	public Cons() {
+		super(10,"Greens");
+	}
+		public static void main(String[] args) {
+			Cons c=new Cons();
+		}}
+20. Write a code for singleton class
+public class ClassDemo {
+	static ClassDemo emp;
+	public static ClassDemo getInstance() {
+		if(emp==null) {
+			emp=new ClassDemo();
+		}
+		System.out.println(emp);
+		return emp;
+	}
+	public void empId() {
+		System.out.println("123");
+	}
+	public static void main(String[] args) {
+		ClassDemo de = getInstance();
+	}
+
+}

@@ -1,0 +1,42 @@
+JIRA
+bug@15
+Greens@12345
+https://demo155.atlassian.net/secure/BrowseProjects.jspa#
+---------------------------
+Agile maganement tool
+----------------------------
+How to install and configure  JIRA Tool
+How to create project in jira
+How to add user/people in jira
+
+How to create Epic and User Story in Jira
+Creatint sprint in Jira
+Adding user story to sprint
+Starting sprint
+Adding sub task to story
+sprint life cycle in Jira
+Creating bug in Jira
+
+Test management activities
+-----------------------------------
+ Zephr pluging
+
+How tp add issue type ""Test" in JIRA
+Select project--->Project Settings -----> issue types ----> Click on Actions -----> Then edit issue type
+How to create test case in Jira with
+Creating test cycle
+Execute/Upadate Test case in Jira
+
+-----------------------------------------------------------------------------
+How to install and configure  JIRA Tool
+https://demo155.atlassian.net/secure/BrowseProjects.jspa#
+
+How to create project in jira
+Click on Jira Software/Dashborad--->Project--->Click on Create project--->Enter project name & select templete---->Click Create button
+How to change Project name:
+Go to project settings and we can change project name or delete project
+key: First 3 letter of project name
+
+How to add user/people in jira: Scrum Master
+Goto JIRA setting---->User Management--->Enter Email id and click on Invite team menber
+

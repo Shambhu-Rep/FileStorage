@@ -1,0 +1,6 @@
+DATE FORMATE:
+
+y - year  : 2015 (yy-15,yyyy-2015)
+Y - Year : 2015  (yy-15,yyyy-2015)
+
+M - Month in year (MM-01, MMM-Jan, MMMMM-January)

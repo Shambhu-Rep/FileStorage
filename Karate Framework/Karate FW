@@ -1,0 +1,240 @@
+What is Karate
+---------------------------------------------------------------------------------
+Open-source tool for API Testing (SOAP & REST)
+Written in Java
+Can also do API Mocking, UI Testing, Performance testing (using Gatling)
+Uses BDD syntax
+Created by ‘Peter Thomas’ in 2017
+
+Features
+---------------------------------------------------------------------------------
+Easy for non-programmers
+(written in java, but implemented using BDD style, Gherkin syntax)
+Requires no technical programming language
+Parallel testing
+(Run Multiple test cases at once in parallel)    
+Distributed testing
+(Run Multiple test cases on multiple platform/system)  
+
+Multi environment testing  Data Driven testing - CSV, JSON, YAML files
+Debugging     Reporting
+Cross-browser web UI testing Cross-platform Desktop testing
+Performance testing of APIs using Gatling
+CI CD support
+
+Prerequisites & Setup
+---------------------------------------------------------------------------------
+Java
+Karate requires at least Java 8 
+Karate works fine on OpenJDK
+IDE
+Eclipse IDE, IntelliJ, VSCode
+Dependency Management
+Maven, Gradle
+----------------------------------------------Create Project
+Add Dependencies
+Make project ready for Karate API Tests
+
+Step 1 : Open Eclipse
+Step 2 : File ＞ New ＞ Maven Project
+Step 3 : Provide the project details and create project
+Step 4 : Add maven dependencies in pom.xml
+Karate Core
+Karate Apache
+Karate JUnit4
+Step 5 : Save project
+
+---------------------------------------------------------------------------------
+How to run a simple GET API Request
+		GET method in HTTP used to access the data or read data or information
+		In GET API request, we need not to provide the payload/body
+			like- Get list of users, Get details of employees
+GET with Background
+GET with Path, Params
+GET with Assertions
+
+Step 1 : Create a feature file under src/test/java folder
+
+Step 2 : Add feature and scenario description
+Step 3 : Add steps to run a sample GET API Request
+   Example : https://reqres.in/
+Step 4 : Run and verify
+
+Example 1
+ # A simple Get API Scenario
+  Scenario: Get demo 1
+    Given url 'https://reqres.in/api/users/2'
+    When method GET
+    Then status 200
+    And print response
+
+Example 2
+Background: 
+    * url 'https://reqres.in/api'
+    * header Accept = 'application/json'
+ 
+# With Background  and Path
+  Scenario: Get demo 2
+    Given path '/users/2'
+    When method GET
+    Then status 200
+
+Example 3
+Background: 
+    * url 'https://reqres.in/api'
+    * header Accept = 'application/json'
+ 
+# With Background, path and params
+  Scenario: Get demo 3
+    Given path '/users'
+    And param page = 2
+    When method GET
+    Then status 200
+
+Example 4
+  # With Assertions
+  Scenario: Get demo 4
+    Given path '/users'
+    And param page = 2
+    When method GET
+    Then status 200
+    And match response.data[0].first_name != null
+    And assert response.data.length == 6
+    And match $.data[1].id == 8
+    And match $.data[3].last_name == 'Fields'
+	
+---------------------------------------------------------------------------------
+POST
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+PUT
+---------------------------------------------------------------------------------
+How to run a simple PUT API Request
+
+What is PUT method
+PUT method in HTTP is used to update a resource data on the server
+used in API request when required to modify a resource
+Replaces the Resource
+For partial update use PATCH
+
+In PUT API Request, we will need to provide the body (data, payload)
+
+Step 1 : Create a feature file under src/test/java folder
+Step 2 : Add feature and scenario description
+Step 3 : Add steps to run a sample PUT API Request
+   Example : https://reqres.in/
+
+Feature: PUT API Request demo
+
+  # PUT
+  Scenario: PUT demo 1
+    Given url 'https://reqres.in/api/users/2'
+    And request { "name": "Raghav", "job": "leader"}
+    When method PUT
+    Then status 200
+    And print response
+    And print responseStatus
+
+Other features discussed in POST Examples will apply here:
+Background
+Assertions
+Get request body from file
+Assert response from file
+
+---------------------------------------------------------------------------------
+----------------------- KARATE INTERVEIW QUESTIONS ------------------------------
+1. What all challenges are included for API testing?
+API Documentation:- endpoint,parameter,resources,payload,
+we can not start testing without documetation. Its all about what data have in backend server and what response
+Access to DB:- we hit request & get response back, how do you validate the response is expected
+Autharization overhead:- OAuth
+
+2. What is diference between POST & PUT Method?
+POST request - create a new object on the server, payload required
+PUT request- Update the object in server with new value
+
+3 What are commonly used HTTP Methods?
+API gives us defferent types of HTTP methods, when developer designed the API, he will assign one HTTP method to API
+GET: It enable you to retrieve data from a server
+POST: It enable you to create/add data to an existing file or resource in server
+PUT:Update the object in server with new value
+DELETE: It lets you to delete data from a server
+
+4. List out few Authentication technique used  in APIs?
+Session/Cookies Based Authentication
+Basic Authentication
+Digest Authentication
+OAuth
+
+5. Why API testing is determined as the most suitable form for automation testing?
+API testing is very lite weight and its more stable the UI testing
+
+6. What is Rest API?
+REST stands for Representational State Transfer. It is a set of function helping developer in performing request and receive response. 
+Interection made through HTTP protocal in REST API.
+
+7. What exactly needs to varify in API testing?
+In API testing we send a request to API with the known data and then analysis the response.
+we will verify the accuracy of the data.
+will see the HTTP status code, response time
+Error codes in case API returns any errors
+Authorization would be check
+Non-functional testing such as performance testing, security testing.
+
+8. What are the core component of an HTTP request?
+HTTP request methods like- PUT, POST, DELETE
+Base Uniform Resource Identifier(URI)
+Resources and parameters
+Request Header, which carries metadata (as key-value pairs) for the HTTP request message
+Request Body, ehich indicates the message content or resources representation
+
+9. What could be the HTT method for below API scenario? Answer if it is PUT or POST?
+Scenario: And API ehich has Endpoint, Parameteres, Headers, cookies and payload
+
+10. What are the difference between API testing and UI testing?
+
+11. What protocal is used by the RESTFUL web services?
+ RESTFUL webservices uses the HTTP protocal. They use the HTTP protocal as am medium of communication between the client and the server.
+ 
+12. What are Soap webservices?
+SOAP- Simple Object Access Protocol. It ia an XML based messaging protocal. It helps in exchanging information among computers.
+
+13. How do you Represent A Resource in REST?
+ Using HTTP protocal
+ 
+14. Can you use GET request instead of PUT to create a resource?
+No, GET request allow ready only rights. It enable to retrieve data from a server but not create a resouce. 
+PUT or POST methods should be used to create a resouce.
+
+POST method should be used when the client send the page to the server and then server lets the client know where it put it.
+PUT should be used when the client specified the locatoin of the page.
+
+15. Can you use POST request instead of PUT to create a resource?
+Yes, we can, Becouse POST is super set of all other HTTP methods except GET.
+
+16. What do you understand by payload in Restful Web service?
+Payload/ body is the secured input data which is sent to API to process the request.
+Payload is generally represented in json format in Rest APIs.
+
+17. What is Rest Assured?
+It is Java library which can automate Rest APIs.
+
+18. How would you define API details in Rest Assured Automation?
+we shall define all the request details and sent it to the server in GIVEN, WHEN, THEN...
+
+19. What is json serialization and deserialization in Rest Assured?
+Serialization in Rest Assured context is process of converting a java object into Request body/payload.
+Derialization in Rest Assured context is process of converting a back response to java object.
+
+20. List out few common JSON parsing technique used in Rest Assured Automation?
+ JSON Path
+ Derialization of json  using POJO classes
+
+21. How would you send attachments to API using Rest Assured Test?
+Using MultiPart method
+
+22. Different status codes and their description?
+
+
+---------------------------------------------------------------------------------

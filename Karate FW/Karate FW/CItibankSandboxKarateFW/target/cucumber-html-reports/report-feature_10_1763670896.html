@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: com/sample/rest/apis/CreateNewUserPayment.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>mobile</td>
+            <td>29 Apr 2021, 14:45</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">com/sample/rest/apis/CreateNewUserPayment.feature</td>
+          <td      class="passed"    >26</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">26</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="4945719303">4.945</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">com/sample/rest/apis/CreateNewUserPayment.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Create new user payments for REST APIs</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1.848</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.946</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.028</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.037</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.739</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.040</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def CreateUserReq = read('classpath:com/sample/rest/apis/CreateNewUserPayment.json')</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+      </div>
+</div>
+
+
+    
+
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_2896167333.html">@Payment</a>
+           <a href="report-tag_2319090070.html">@POST_CrateUserPayment</a>
+      </div>
+
+  
+  <span class="lead-duration duration">3.097</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create new user payment details of REST APIs</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://sample-4e6d.restdb.io/rest/payments'</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header x-apikey = '9677194df0cd556c1bb2f9aeee86c7e218482'</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request CreateUserReq</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">3.075</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>14:18:05.017 request:
+1 &gt; POST https://sample-4e6d.restdb.io/rest/payments
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 111
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sample-4e6d.restdb.io
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_271)
+1 &gt; x-apikey: 9677194df0cd556c1bb2f9aeee86c7e218482
+{&quot;fromAccount&quot;:&quot;33407030&quot;,&quot;toAccount&quot;:&quot;96839390&quot;,&quot;date&quot;:&quot;2020-06-01&quot;,&quot;amount&quot;:5000,&quot;remarks&quot;:&quot; New Test 12345&quot;}
+
+14:18:06.729 response time in milliseconds: 1703.33
+1 &lt; 201
+1 &lt; connection: close
+1 &lt; content-length: 445
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; date: Thu, 29 Apr 2021 08:46:47 GMT
+1 &lt; etag: W/&quot;1bd-0CpTNj9ciqe+Tv2QDREw5dp9Qwo&quot;
+1 &lt; vary: X-HTTP-Method-Override, Accept-Encoding
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-xss-protection: 1; mode=block
+{&quot;_id&quot;:&quot;608a72770477dd04000aaedb&quot;,&quot;fromAccount&quot;:&quot;33407030&quot;,&quot;toAccount&quot;:&quot;96839390&quot;,&quot;date&quot;:&quot;2020-06-01T00:00:00.000Z&quot;,&quot;amount&quot;:5000,&quot;remarks&quot;:&quot; New Test 12345&quot;,&quot;_created&quot;:&quot;2021-04-29T08:46:47.439Z&quot;,&quot;_changed&quot;:&quot;2021-04-29T08:46:47.439Z&quot;,&quot;_createdby&quot;:&quot;api&quot;,&quot;_changedby&quot;:&quot;api&quot;,&quot;_keywords&quot;:[&quot;api&quot;,&quot;33407030&quot;,&quot;96839390&quot;,&quot;2020-06-01&quot;,&quot;00:00&quot;,&quot;5000&quot;,&quot;new&quot;,&quot;test&quot;,&quot;12345&quot;],&quot;_tags&quot;:&quot;api 33407030 96839390 2020-06-01 00:00 5000 new test 12345&quot;,&quot;_version&quot;:0}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 201</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print 'response : '+response</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>14:18:06.738 [print] response : {&quot;date&quot;:&quot;2020-06-01T00:00:00.000Z&quot;,&quot;toAccount&quot;:&quot;96839390&quot;,&quot;amount&quot;:5000,&quot;fromAccount&quot;:&quot;33407030&quot;,&quot;_tags&quot;:&quot;api 33407030 96839390 2020-06-01 00:00 5000 new test 12345&quot;,&quot;_createdby&quot;:&quot;api&quot;,&quot;_changed&quot;:&quot;2021-04-29T08:46:47.439Z&quot;,&quot;_changedby&quot;:&quot;api&quot;,&quot;_created&quot;:&quot;2021-04-29T08:46:47.439Z&quot;,&quot;_keywords&quot;:[&quot;api&quot;,&quot;33407030&quot;,&quot;96839390&quot;,&quot;2020-06-01&quot;,&quot;00:00&quot;,&quot;5000&quot;,&quot;new&quot;,&quot;test&quot;,&quot;12345&quot;],&quot;_id&quot;:&quot;608a72770477dd04000aaedb&quot;,&quot;_version&quot;:0,&quot;remarks&quot;:&quot; New Test 12345&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def id = response._id</span>
+  
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print 'Response Id : '+id</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>14:18:06.748 [print] Response Id : 608a72770477dd04000aaedb</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+      </div>
+</div>
+
+
+    
+
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

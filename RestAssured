@@ -1,0 +1,89 @@
+
+What is REST Assured
+Uses of REST Assured
+How to create Rest Assured framework from scratch
+How to create TestNG tests 
+How to create java maven rest assured framework on eclipse
+How to create bdd tests in rest assured
+
+What is REST Assured
+-----------------------------------
+REST Assured is a Java library for testing RESTful web services
+It is used to invoke REST web services and check response
+Can be used to test XML as well as JSON based web services
+It supports POST, GET, PUT, DELETE, OPTIONS, PATCH and HEAD requests and can be used to validate and verify the response of these requests
+Can be integrated with testing frameworks like JUnit, TestNG etc
+REST Assured is implemented in Groovy
+
+Prerequisites
+Java
+IDE (Eclipse, IntelliJ, etc)
+Maven
+TestNG
+Rest/RESTful
+------------
+REST represents Representational State Transfer
+RESTFUL web services are web services that follows REST architectural concept (stateless client-server architecture).
+Its is an architectural style for developing applications that can be accessed over the network 
+
+Every content in the REST architecture is considered a resource. 
+
+The resource == object in the object-oriented programming world. 
+Can be represented as text files, HTML pages, images, or any other dynamic data.
+
+The REST Server provides access to these resources whereas the REST client consumes (accesses and modifies) these resources. Every resource is identified globally by means of a URI
+URI
+------------
+Uniform Resource Identifier is the full form of URI which is used for identifying each resource of the REST architecture.
+URI is of the format:
+<protocol>://<service-name>/<resourceType>/<ResourceId>
+
+They are of2 types:
+URN
+URL
+
+HTTP Methods
+--------------
+HTTP Methods are also known as HTTP Verbs. They form a major portion of uniform interface restriction followed by the REST that specifies what action has to be followed to get the requested resource. Below are some examples of HTTP Methods:
+
+GET: This is used for fetching details from the server and is basically a read-only operation.
+
+POST: This method is used for the creation of new resources on the server.
+
+PUT: This method is used to update the old/existing resource on the server or to replace the resource.
+
+DELETE: This method is used to delete the resource on the server.
+
+PATCH: This is used for modifying the resource on the server.
+
+OPTIONS: This fetches the list of supported options of resources present on the server.
+
+The POST, GET, PUT, DELETE corresponds to the create, read, update, delete operations which are most commonly called CRUD Operations.
+
+GET, HEAD, OPTIONS are safe and idempotent methods whereas PUT and DELETE methods are only idempotent. POST and PATCH methods are neither safe nor idempotent.
+
+RESTful Web Services Feature
+--------------------------------
+The service is based on the Client-Server model.
+
+The service uses HTTP Protocol for fetching data/resources, query execution, or any other functions.
+
+The medium of communication between the client and server is called “Messaging”.
+
+Resources are accessible to the service by means of URIs.
+
+It follows the statelessness concept where the client request and response are not dependent on others and thereby provides total assurance of getting the required data.
+
+These services also use the concept of caching to minimize the server calls for the same type of repeated requests.
+
+Supports multiple technologies for data transfer such as text, xml, json, image etc.
+No contract defined between server and client, so loosely coupled implementation.
+REST is a lightweight protocol
+REST methods can be tested easily over browser.
+The HTTP protocol and REST web service, both shares the feature of statelessness.
+Any previous communication with the client and server is not maintained and thus the whole process is very much simplified.
+Every method required for communication is identified as an independent method i.e. there are no dependencies to other methods.
+
+As per REST architecture, a RESTful web service should not keep a client state on server. This restriction is called statelessness. It is responsibility of the client to pass its context to server and then server can store this context to process client's further request. For example, session maintained by server is identified by session identifier passed by the client. 
+
+

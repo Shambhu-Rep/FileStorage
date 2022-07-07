@@ -1,0 +1,33 @@
+<testsuite failures="1" name="Citibank/Accounts/redemption.feature" skipped="0" tests="1" time="2.734838">
+  <testcase classname="Citibank.Accounts.redemption" name="Redemption" time="2.734838">
+    <failure message="redemption.feature:11 - &#10;accessToken.feature:20 - &#10;java.net.UnknownHostException: sandbox.apihub.citi.com">* call read('classpath:reusable.feature') ................................. passed
+* def redemptionRequest = read('classpath:Citibank/Accounts/redemptionRequest.json') . passed
+* call read('classpath:Citibank/Accounts/accessToken.feature') ............ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: redemption.feature:11 - 
+accessToken.feature:20 - 
+java.net.UnknownHostException: sandbox.apihub.citi.com&#13;
+	at ✽.* call read('classpath:Citibank/Accounts/accessToken.feature') (redemption.feature:11)&#13;
+
+* call read('classpath:Citibank/Accounts/rewardlinkage.feature') .......... skipped
+* call read('classpath:Citibank/Accounts/rewardLinkageActivation.feature') . skipped
+* call read('classpath:Citibank/Accounts/pointBalanceInquiry.feature') .... skipped
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/'+rewardLinkCode+'/redemption' . skipped
+And header client_id = 'cf652567-f5be-4d34-a77f-98374ee4b293' ............. skipped
+And header uuid = randomString(20) ........................................ skipped
+And header Accept = 'application/json' .................................... skipped
+And header Content-Type = 'application/json' .............................. skipped
+And header Authorization = accessToken .................................... skipped
+And request redemptionRequest ............................................. skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+And match response.orderId == '#string' ................................... skipped
+* def availablePointBalance = response.availablePointBalance .............. skipped
+* def pointsAfterRedemption = call read('classpath:Citibank/Accounts/pointBalanceInquiry.feature') . skipped
+And match pointsAfterRedemption.availablePointBalance == availablePointBalance . skipped
+* print availablePointBalance ............................................. skipped
+* print pointsAfterRedemption.availablePointBalance ....................... skipped</failure>
+  </testcase>
+</testsuite>

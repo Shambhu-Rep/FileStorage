@@ -1,0 +1,14 @@
+<testsuite failures="0" name="com/sample/rest/apis/CreateNewUserPayment.feature" skipped="0" tests="1" time="4.04822">
+  <testcase classname="com.sample.rest.apis.CreateNewUserPayment" name="Create new user payment details of REST APIs" time="4.04822">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def CreateUserReq = read('classpath:com/sample/rest/apis/CreateNewUserPayment.json') . passed
+Given url 'https://sample-4e6d.restdb.io/rest/payments' ................... passed
+And header x-apikey = '9677194df0cd556c1bb2f9aeee86c7e218482' ............. passed
+And request CreateUserReq ................................................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* print 'response : '+response ............................................ passed
+* def id = response._id ................................................... passed
+* print 'Response Id : '+id ............................................... passed</system-out>
+  </testcase>
+</testsuite>

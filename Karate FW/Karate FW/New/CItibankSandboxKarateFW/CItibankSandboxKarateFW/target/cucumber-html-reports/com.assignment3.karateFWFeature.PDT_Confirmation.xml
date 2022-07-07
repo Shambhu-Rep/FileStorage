@@ -1,0 +1,87 @@
+<testsuite failures="0" name="com/assignment3/karateFWFeature/PDT_Confirmation.feature" skipped="0" tests="2" time="8.402309">
+  <testcase classname="com.assignment3.karateFWFeature.PDT_Confirmation" name="Initiate the PDT-Confirmation API with valid fields and verify the Expected Result" time="4.38383">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_Confirmation_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_Confirmation.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_PDT-PreProcess.feature@PDT_Preprocess') . passed
+Given url testData.baseURI + testData.PDT_Confirmation_Resource ........... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT_Confirmation .......... passed
+* set PDT_Confirmation_Payload.controlFlowId = control_Flow_Id ............ passed
+* print 'POST_PDT-Confirmation Payload Request : ' + PDT_Confirmation_Payload . passed
+And request PDT_Confirmation_Payload ...................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.SourceAccount.displaySourceAccountNumber == '#notnull' ... passed
+* match response.SourceAccount.sourceAccountAvailableBalance == '#present' . passed
+* match response.SourceAccount.sourceCurrencyCode == 'BHD' ................ passed
+* match response.DestinationAccount.displayDestinationAccountNumber == '#notnull' . passed
+* match response.DestinationAccount.destinationAccountAvailableBalance == '#present' . passed
+* match response.DestinationAccount.destinationCurrencyCode == 'BHD' ...... passed
+* def transaction_ReferenceId = response.transactionReferenceId ........... passed
+* match response.transactionReferenceId == '#present' ..................... passed
+* print transaction_ReferenceId ........................................... passed
+* print '********* PDT-Confirmation Done and transactionReferenceId Generated  *********' . passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.karateFWFeature.PDT_Confirmation" name="To verify the PDT-Confirmation API with invalid controlFlowId" time="4.01848">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_Confirmation_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_Confirmation.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_PDT-PreProcess.feature@PDT_Preprocess') . passed
+Given url testData.baseURI + testData.PDT_Confirmation_Resource ........... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT_Confirmation .......... passed
+* set PDT_Confirmation_Payload.controlFlowId = control_Flow_Id ............ passed
+* print 'POST_PDT-Confirmation Payload Request : ' + PDT_Confirmation_Payload . passed
+And request PDT_Confirmation_Payload ...................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.SourceAccount.displaySourceAccountNumber == '#notnull' ... passed
+* match response.SourceAccount.sourceAccountAvailableBalance == '#present' . passed
+* match response.SourceAccount.sourceCurrencyCode == 'BHD' ................ passed
+* match response.DestinationAccount.displayDestinationAccountNumber == '#notnull' . passed
+* match response.DestinationAccount.destinationAccountAvailableBalance == '#present' . passed
+* match response.DestinationAccount.destinationCurrencyCode == 'BHD' ...... passed
+* def transaction_ReferenceId = response.transactionReferenceId ........... passed
+* match response.transactionReferenceId == '#present' ..................... passed
+* print transaction_ReferenceId ........................................... passed
+* print '********* PDT-Confirmation Done and transactionReferenceId Generated  *********' . passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_Confirmation_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_Confirmation.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_PDT-PreProcess.feature@PDT_Preprocess') . passed
+Given url testData.baseURI + testData.PDT_Confirmation_Resource ........... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT_Confirmation .......... passed
+* set PDT_Confirmation_Payload.controlFlowId = testData.invalid_controlFlowId . passed
+* print 'POST_PDT-Confirmation Payload Request : ' + PDT_Confirmation_Payload . passed
+And request PDT_Confirmation_Payload ...................................... passed
+When method post .......................................................... passed
+Then status 400 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'error' .......................................... passed
+* match response.code == 'invalidControlFlowId' ........................... passed
+* match response.details == 'Control flow ID is invalid' .................. passed
+* print '********* PDT-Confirmation and invalid_controlFlowId *********' .. passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,18 @@
+<testsuite failures="1" name="com/sample/rest/apis/ModifyCreatedUserPayment.feature" skipped="0" tests="1" time="0.029837">
+  <testcase classname="com.sample.rest.apis.ModifyCreatedUserPayment" name="Modify user payment details by Id of REST APIs" time="0.029837">
+    <failure message="ModifyCreatedUserPayment.feature:11 - evaluation (js) failed: 'https://sample-4e6d.restdb.io/rest/payments/'+id, ReferenceError: &quot;id&quot; is not defined in &lt;eval&gt; at line number 1">* call read('classpath:reusable.feature') ................................. passed
+* def ModifyUserReq = read('classpath:com/sample/rest/apis/ModifyCreatedUserPayment.json') . passed
+Given url 'https://sample-4e6d.restdb.io/rest/payments/'+id ............... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: ModifyCreatedUserPayment.feature:11 - evaluation (js) failed: 'https://sample-4e6d.restdb.io/rest/payments/'+id, ReferenceError: "id" is not defined in &lt;eval&gt; at line number 1&#13;
+	at ✽.Given url 'https://sample-4e6d.restdb.io/rest/payments/'+id (ModifyCreatedUserPayment.feature:11)&#13;
+
+And header x-apikey = '9677194df0cd556c1bb2f9aeee86c7e218482' ............. skipped
+And header Content-Type = 'application/json' .............................. skipped
+And request ModifyUserReq ................................................. skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print 'response : '+response ............................................ skipped</failure>
+  </testcase>
+</testsuite>

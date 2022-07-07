@@ -1,0 +1,7 @@
+====================== Karate ==========================
+Documentation: https://github.com/intuit/karate
+Karate jars: https://dl.bintray.com/ptrthomas/karate/
+
+
+Sample API:
+https://reqres.in/

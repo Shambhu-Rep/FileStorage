@@ -1,0 +1,1233 @@
+ Core Java Interview Questions and Answers
+--------
+C++:
+It is a platform dependent
+We can run single application at a time.
+1.What is java?
+================
+*Java is a simple programing language.
+*Writing, compilation and debugging a program is very easy in java.
+*It helps to create reusable code.
+It is a platform independent and oops based one , easy to run and debug.
+We can run multiple application at a time.
+2.Why are we go for java?
+==========================
+*It is a platform independent and open soruce.
+*It runs multiple application at a time.
+3.What are the main features of java?
+=====================================
+*Java has more features,
+1. Platform independent
+2. Open source
+3. Multithreading
+4. More secure
+5. Portable
+More features:
+Simple
+Object-Oriented
+Robust
+Architecture neutral
+Interpreted
+High Performance
+Distributed
+Dynamic
+
+Simple:java is very simple programing language and easy to learn.
+There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
+Most of the complex and confusing features of other languages(c,c++) like Pointers, multiple inheritance ... removed from java.
+Architecture neutral: Java program never communicate with the platform directly. Changes and upgrades in operating systems,processor and
+system resources will not force any changes in programs.
+Portable: we can carry the java byte code to any platform without making any changes. (Mobile number portability in india)
+Secure: Java program never communicate directly with the machine. First converted into byte code and then converted into machine code by the JVM.
+If the bytecode contains any problem or if it is not properly formatted, then JVM won't allow that code to rum and will raise VerifyError. Internally inside JVM, bytecode verifier is responsible to verify byte code.
+Hence java program wont cause any problem to the system.
+Test.java --> Test.class --> machine code(JVM)-->execute.
+Object-Oriented: Java is object oriented programming language like C++, Most of the time in java, we have to handle everything in terms of Object.
+OOPS feature are there--
+Multithreading:
+ava supports multithreading
+It enables a program to perform several task simultaneously
+
+Robust:
+Java is strongly typed language. Compiler will check each and every declaration and assignment at compiler time only for compatibility.
+If any problem wrt types,then at compile time only we can identify the problem.
+Java provides Garbage collector for automatic memory management. Hence there is no chance of memory related problems.
+Java provides inbuilt Exception handling, which prevents abnormal termination of the program at runtime.
+Java is platform independent and it can run on any platform.
+Because of all these facilities, the chance of failing the program at runtime is very very less and Hence java is robust.
+
+Distributed:
+If the application is distributed across multiple machines(JVMs), such type of application is called as distributed application.
+Java provides inbuild support for distributed programming with RMI, CORBA, EJB.
+
+Compiled and interpreted:
+Java is both compiled and interpreted programming language.First java compiler compiles java code and generate machine independent bytecode.
+At runtime JVM interprets this byte code into machine code and execute that machine code.
+
+Describe the real-world applications of Java:
+Android app development
+Web application- e-commerce, insurence, education
+Software tools- eclipse, netbeans
+J2ME Apps --nokia phones use j2me apps designed in java language
+GUI Based Desktop application
+Enterprise application
+Backend web and application servers
+
+
+4.What is platform independent?
+================================
+If we write java program once, we can on any platform. i.e java follow write once Run anywhere or any platform.
+*During the compilation the java program converts into byte code.
+*Using byte code we can run the application to any platform such as windows, mac, linux, etc..
+5.What is mean by Open Source?
+===============================
+*A program in which source code is available to the general public for use and/or modification from its original design at free of cost is called open source.
+6.What are types of tools are used to execute java?
+===================================================
+*Notepad
+*Net bean
+*Eclipse
+*J Developer(oracle)
+*RAD(IBM)
+7.What are difference between JDK,JVM,JRE?
+==========================================
+JDK:
+----
+*Java Development Kit
+JDK provids a environment to run and develop java application.
+*If we want to run any applications in java we need JDK have to installed.
+*JDK versions: 1.0 to 1.12.
+JDK = JRE+development tool
+JRE: ---- *Java Runtime Environment. *It is a pre-defined class files (i.e.) library files. 
+JRE provids a environment just to run java application
+JRE = JVM+library classes
+JVM:
+----
+*Java Virtual Machine.
+*It is mainly used to allocate the memory and compiling.
+JVM responsible to run java program(byte code) line by line.
+
+
+8.What is mean by oops?
+=======================
+*OOPS is Object Oriented Programing Structure.
+*OOPS is a method of implementation in which programs are organized as collection of objects, class and methods.
+9.What are the coding Standard used in java?
+=======================================
+*Pascal notation: Each and every word of the first letter should be in capital. Example:GreensTechnology
+*Camel notation: First word should be small after every word of the first letter should be capital. Example:greensTechnology
+10.What is mean by class,method,object?
+====================================
+Class:
+------
+*Class is nothing but collection of methods or collection of objects.
+Class is a logical entity which contain the logic
+Class is a blue print to create object.
+Object:
+-------
+Object is physical entity representing memory.
+*Object is the run time memory allocation.
+*Using object we call the any methods.
+Without class we cant create object.
+Based on single blue print/class is possible create multiple object but every object occupied some memory
+
+
+ Method:
+-------
+*Method is nothing but set of action to be performed.
+
+11.What is mean by Encapsulation?
+=================================
+*It is the structure of creating folders.
+*It wrapping of the data and code acting on a data together in to a single unit called as encapsulation.
+*Example of encapsulation is POJO class.
+Encapsulation used in list,set,map and POM
+Interface also used in POM
+12.What are the datatypes used in java?
+=======================================
+*byte 
+*short 
+*int 
+*long
+*float
+*double
+*boolean 
+*char 
+*String
+13.What is byte size and range of int datatypes?
+==================================================
+*Size of byte is 1 byte (8 bit)
+*Range formula =[-2^(n-1)] to [(2^(n-1))-1] for int n=32.
+14.What is mean by Wrapper class?
+=================================
+*Classes of data types is called wrapper class.
+*It is used to convert any data type into object.
+*All classes and wrapper classes default value is Null.
+Wrapper class used in collection class.
+15.What is the main use of Scanner class?
+=========================================
+*For getting the inputs from the user at the run time.
+16.What are the methods available in Scanner Class?
+====================================================
+*nextByte();
+*nextShort();
+*nextInt();
+*nextLong();
+*nextFloat();
+*nextDouble();
+*next().charAt(0);
+*next();
+*nextLine();
+*nextBoolean();
+18.What are the ways to access the methods /data from another class?
+=====================================================================
+*We can access the another class methods either by creating object or use extends keyword.
+=================================================================================Polymorphism=================================================================================================
+19.What is mean by polymorphism?
+================================
+*Poly-many.
+*Morphism-forms.
+*Taking more than one forms is called polymorphism or one task completed by many ways.
+20.What are the difference between method overloading and overriding?
+=====================================================================
+Method overloading(static binding/compile time polymorphism):
+-------------------------------------------------------------
+*Class-same
+*Method-same
+*Argument-differ based on datatype,order,number
+Example: frame(),winddow(),sendkeys(),implicitlyWait(),isElementPresent(List<WebElement> ele)
+Method overriding(dynamic binding/run time polymorphism):
+----------------------------------------------------------
+*Class name-differ(using extends)
+*Method-same
+*Argument-same
+Example: userdefined exception we use method overriding
+TestNG-IRetryAnalyzer,IAnnotationTransformer
+=============================================================================Inheritance========================================================================================================
+17.What is mean by inheritance?
+===============================
+*We can access one class property into another class using 'extend' keyword and reusuable purpose.
+*It avoid memory wastage.
+21.What are the types of inheritance?
+=====================================
+*Single Inheritance
+*Multilevel Inheritance
+*Multiple Inheritances
+*Hybrid Inheritance
+*Hierarchical Inheritance
+22.Why multiple inheritance is not supported in java?
+=====================================================
+Multiple inheritance wont support in java due to syntax error and compilation error.This is also known as dead lock or diamond problem.
+*Priority problem
+*Compilation error/syntax error
+(i.e) if both parent class having same method name it will get priority problem so it doesn't work in java.
+23.What are the difference between Multiple and Multilevel inheritance?
+=======================================================================
+Multiple inheritance:
+---------------------
+*Combination of more then one parent class directly supported one child class.
+*It wont work in java due to priority problem.
+Multilevel inheritance:
+-----------------------
+*Combination of more than one parent class and child class using tree level structure.
+*It work in java.
+=================================================================================Access Specifier/Access Modifiers==================================================================================
+24.What is mean by access specifier?
+====================================
+*It decides the level of access to the variable,method and class.
+25.What are the difference between public and protected?
+========================================================
+Public:
+-------
+*It is global level access( same package + different package).
+Protected:
+----------
+*Inside package + outside Package (Extends).
+==================================================================================Abstraction===================================================================================================
+26.What is mean by Abstraction?
+===============================
+*Hiding the implementation part is called abstraction.
+*We wont create object for the Abstract class.
+*It contain simply templete and business logic is presented inside.
+Method Signature:When a class have method without logic called as method signature.
+Abstract Method: When the method name contain abstract keyword and business logic can not be written for abstract method.
+Non-abstract Method: When the keyword abstract not present in method called as Non-abstract method. Business logic can be written for Non-abstract method.
+27.What are the types of Abstraction?
+=====================================
+1.Partially abstraction(abstract class).
+2.Fully abstraction(interface).
+28.Can we create Object for Abstract class?
+===========================================
+*No, we cant create object for abstract class.
+29.What is mean by Interface?
+=============================
+*It will support only abstract method, won't support non abstract method.
+*In interface "public abstract" is default. we no need to mention.
+*It using implements keywords.
+*Default return type is public.
+30.What are the difference between Abstract and Interface?
+==========================================================
+Abstract class:
+---------------
+*It is partially abstraction.
+*It support both abstract method and non-abstract method.
+*It’s using "extends" keyword.
+*Here "public abstract" have to mention.
+*We can use whatever access specifier we want.
+Interface:
+----------
+*It is fully abstraction.
+*It support only abstract method.
+*It’s using "implement" keyword.
+*"public Abstract" is default no need to mention.
+*Here we use only public( access specifier).
+========================================================================================String==================================================================================================
+31.What is mean by String?
+==========================
+*Collections of charactor or word enclosed with double quotes is called as String.
+*Example : "greenstechnology".
+32.What are the method available in string?
+===========================================
+*charAt(index);  char
+*lenght();   int
+*equals();   boolean
+*equalsIgnoreCase();   boolean
+*indexOf(index); int  System.out.println("Index of H in str1 after from 15 character : "+str1.indexOf('H', 15));
+		System.out.println("Index of H in str1 after from 10 character : "+str1.lastIndexOf('H', 10));
+*lastIndexOf();   int
+*toUpperCase();  String
+*toLowerCase();  String
+*startsWith();   boolean
+*endsWith();   boolean
+*replace();  // replace('6', 'A');  String
+*replaceAll(str,"val");
+*contains();  boolean
+*split();
+*trim();
+*concat();
+*subString();
+*isEmpty();
+*identifyHashCode(); int  (to identify the memory location)
+compare()
+*CompareTo();
+*hashCode();   int
+intern() ; this should return the String with same value
+*valueOf(); we can convert int to string, long to string, boolean to string, character to string, float to string, double to string, object to string and char array to string
+Methods:  21
+
+6.What is mutable and immutable string?
+Immutable:
+>eg-String
+>We can store more duplicate value in same memory
+>We can't change the value in memory automatically if we want to change value/memory we need to give memory reference
+>Use concat() method to add two String
+>If we join two string (different) it will store different memory location or new memory location
+>The immutable string store memory in string pool or string constant
+Mutable:
+>eg-String builder and String buffer
+>We can't store duplicate value in same memory,It will store in differrent memory location
+>We can change the value of object in memory
+>Use append() method to add two string
+>If we join two string (different) it will store in the first memory location
+>It will store in heap memory
+
+7.Difference between stringbulider and stringbuffer?
+StringBuilder:
+> StringBuilder is asynchronized
+> It is not a thread safe
+>Performance is high
+StringBuffer:
+> String Buffer is synchronized
+> It is thread safe
+>Performane is low
+>If the string content is fixed and it would not change then we go for String.
+>If the content is not fixed and keeps on changing and thread safe is required then we go for String buffer.
+>If the content is not fixed and keeps on changing and thread safe is not required then we go for String builder
+
+>>>>Literal String and Non literal string
+======================================
+Literal String:
+---------------
+*Its stored inside the heap memory(string pool or string constant).
+*It share the memory if same value (duplicate value)
+*It save the mmemory
+Non literal string:
+--------------------
+*It’s stored in the heap memory.
+*Its create a new memory every time even if its duplicate value(same value)
+*Wastage of Memory
+Heap and stack memory
+=======================
+Heap memory:
+------------
+*Heap for dynamic memory allocation. 
+*Memory access is slow.
+Static memory:
+--------------
+*Stack is used for static memory allocation.
+*Variables allocated on the stack are stored directly to the memory and access to this memory is very fast.
+98.What is the default Package in java?
+=========================================
+*java.lang 
+99.What are the difference between equals() & hashcode()?
+===================================================
+Equals:
+-------
+*Used to compare the two string.
+Hashcode:
+----------
+*Used to return the address where it stored.
+100.How can we make Array list As a synchronized?
+================================================== 
+*collections.SynchronisedList(refName of array);
+
+8.Method name to identify memory location?
+ identityHashCode(); to identify the memory location
+System.out.println(System.identityHashCode(s));
+
+10.What is difference between charAt() and contains() method?
+charAt():
+>It is used to find the particular character from string based on index value
+> Return type is character
+contains():
+>It will check the particular character is present in string or not based on character we have passed
+> Return type is boolean
+
+11.What is the return type of compareTo()
+ Return type is int
+
+13.What is mean by ASCII value?
+A-Z  65 to 90 
+ a-z 97 to 122 
+0-9 48 to 57 
+  remaining special characters 
+==================================================================CONSTRUCTOR================================================================================================================
+1.What is mean by constructor and types?
+Constructor is a block of code (similar to method) having same name as that of class name.
+Constructor does not having return type.
+The only specifiers applicable for constructor are PPDP.A Java constructor cannot be abstract, static, final, and synchronized
+It execute automatically when we create an object.
+Constructor are used to initialize the object 
+
+It will automatically invoke the default constructor.
+It will support in method overloading but won't support in method overriding.
+Default Constructor(No-arg constructor) :  created by compiler not JVM
+
+1. No-arg Constructor(user defined)/Non-Parameterized Constructor: It is type of constructor which have no parameter and body of a constructor can contain multiple Stmt.
+2. Parameterized Constructor: It is type of constructor which have multiple parameter in parameter list and body of a constructor can have multiple Stmt.
+Q. Why use the parameterized constructor?
+The parameterized constructor is used to provide different values to distinct objects. However, you can provide the same values also.
+3.Do constructors have any return type?
+No
+Q. What is the purpose of a default constructor?
+The default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.
+7.Why a return type is not allowed for constructor?
+Constructor are used to initialize the object only so we are not using void.
+If we didnt create constructor in class then compiler create default constructor itself  so compiler cant judge what return type should be
+8.Can we declare constructor as 'private'?
+Yes, private,public,protected,default also declared.
+9.Why a compiler given constructor is called as default constructor?
+
+10.What is constructor chaining and how can it be achieved in Java?
+The process of calling one costructor from another constructor wrt current object called as contructor chaining.
+Using this and super stmt.
+11.Can we use this() and super() in a method?
+No
+this(): This Stmt used by constructor to call another constructor of the same class.
+super(): Super stmt used to call the superclass constructor from subclass costructor.
+A constructor can call only one constructor inside the constructor body and it should be first statement in constructor body.
+
+12.What are the common uses of "this" keyword in java?
+this used inside the constructor body and inside instance method body.
+this keyword used to defferentiate b/w a local variable and instance variable in a scenario where LV and IV name are same.
+super keyword: is used to acces the superclass hidden method and variable.
+
+15.What is mean by static keyword in java?
+16.Can we override static method in java?
+NO, Static method can be inherited and cannot be overriden
+Static method can not declared as abstract.
+final method can be inherited and cannot be overriden
+17.Can we overload static method in java?
+yes
+18.What is mean by static variable?
+19.What is mean by static method?
+40.Why a compiler given constructor is called as default constructor?
+=====================================================================
+*If we wont pass the constructor explict it will take the default constructor.
+43.What is the super class of all java?
+=======================================
+*Object is the super class of all java.
+
+No, constructors are not inherited in Java.
+
+Java Constructor	
+A constructor is used to initialize the state of an object.
+A constructor must not have a return type.	
+The constructor is invoked implicitly.	
+The Java compiler provides a default constructor if you don't have any constructor in a class.	
+The constructor name must be same as the class name.	
+Java Method
+A method is used to expose the behavior of an object.
+A method must have a return type.
+The method is invoked explicitly.
+The method is not provided by the compiler in any case.
+The method name may or may not be same as the class name.
+
+============================================================================================================Variables============================================================================
+44.What are the types of variable?
+===================================
+*Local variable.
+*Class/static variable.
+*Instance variable
+
+Local variable: 
+It should be declared within the method or block or constructor.
+Local variable created when control blocked comes the block and destroyed when come out the block.
+We cant able to use access modifiers
+Local variable should be initialize, can't make default.
+The scpoe of local variable is visible only the block,constructor or method
+Local variable stored in stack memory.
+Memory allocation-When method start memory allocated when method is completed memory destroyed.
+
+Class/Instance level variable: 
+CLV declare inside the class but outside of method,block or constructor.
+CLV created when object created and destroyed when object destroyed.
+Access modifier can be used for class level variable.
+CLV may or may not be initialize. if not initialize it will take default value.
+When CLV call in the main method than create an object. then we have to mention objRefName.variableName.
+CLV stored in heap memory
+Memory allocation---> Memory allocated when object created
+
+49.What is mean by static variable / Class level variable?
+=======================================================================
+static variable declare inside the class but outside of method,block or constructor with static keyword.
+Static variable in java belong to the class(not to an object).
+If we dont initialize the static variable it will automatically take default value.
+There is no need to create an object for static variable, whenever we want to access th static variable outside the class we use class_name.variable name
+Static variable created in stack memory.
+Static variable created once the class created and detroyed when class destroyed
+We can use access modifiers for static variable.(ppdp)
+It is possible to use both in static method and non-static method.
+Memory allocation-when the .class file loading
+
+45.What is meant by local variable,instance variable,class/static variable?
+===========================================================================
+*Static Variable-It is used for share the same variable or method of a given class.
+*Local Variable-It will declare below the main method.
+*Class variable-It will access only with in the class
+46.What is mean by static keyword in java?
+===========================================
+*The static keyword is mainly used for memory management.
+*It is used for share the same variable or method of a given class.
+47.Can we override static method in java?
+=========================================
+*No,we can't override the static method because it is part of a class rather than an object.
+48.Can we overload static method in java?
+=========================================
+*Yes, we can overload the static method in java.
+STATIC KEYWORD
+================================================================================================================================================================
+static keyword is non-access modifier
+Use:
+Variable(class level)                    ---local variable (error)
+Methods
+Block
+inner class(nested class)           -----outerclass(error)
+The static keyword is mainly used for memory management.
+
+
+
+50.What is mean by static method?
+*Static method in java belong to the class(not to an object).
+Static method created once the class created and detroyed when class destroyed
+There is no need to create an object for static metods whenever we want to access the static method outside the class we use class_name.method name
+A static method  can access only static data.It can not access non-static method(instance data) ie only static variable can access
+A static method can call only other static methods and can not call a non-static method.
+A static method can not refer to "this" or "super" keyword in anyway
+We can use access modifiers for static variable.(ppdp)
+
+50.What is mean by static Block?
+Static block executes automatically when the class is loaded in the memory
+Without main method we can print "Hello".
+It will execute without main method before (jdk 1.6)
+We can create multiple static block
+First static block execute then main method, Static block execute top to bottom
+static block is executed at class loading time, hence at the time of class loading if we want to perform any activity, we have define that inside static block
+static block is used to initialize the static members
+
+This Keyword:
+------------------------
+this keyword refers to current class level instance variable 
+this keyword is the reference variable  that refers to the current object	
+
+
+
+
+
+
+
+*When a variable is declared as static,then a single copy of variable is created and shared among all object at class level.
+*Static variable are essentially ,global variable.
+
+
+=================================================================================Exception======================================================================================================
+
+
+1.what is Exception?
+Exception is an error message whenever exception will occurs in program that line program terminate itself.
+Exception is an event in which program execute in an abnormal manner.
+It occurs during run time only called as run time exception.
+Exception Handling: It is a process of handing an exception thrown by java run time environment during the execution of program.
+
+2.Explain about types of Expection?
+Types:
+> Checked Exception:
+The Exception which are checked by compiler for smooth execution  of the program at runtime called as Checked Exception.
+In the case of checked exceptions compiler will check whether we are handling exception, if programmer not handling then we will get compile time error.
+
+Whenever exception will occur in complie time it is called as compile time exception
+checked exception are checked during compile time so that we have smooth execution of program during rum time
+eg: IoException, FileNotFoundException,sqlNotFoundException,ClassNotFoundException,IONotFoundException
+
+>Unchecked Exception:
+The exception which are not checked by the compiler are called as unchecked exception
+In case of Unchecked Exception compiler wont check  whether programmer handling exception or not.
+Whenever exception will occur in runtime it is called as run time exception
+eg: ArithmaticException,ArrayIndexOfBoundException,IndexOfBoundException,NullPointerException,InputMismatchException,
+NumberFormatException,StringIndexOf BoundException,StringFormatException
+
+4.What are the differences between exception and error?
+Throwable(class) :  acts as root for java exception hierarchy
+Exception:
+Most of the cases Exception are caused by our program only and this this are recoverable
+
+Error:
+Most of the times errors are not caused by our program these are due to lack of system resources
+Errors are non recoverable
+Eg: If outOfMemory/StackOverFlow/JVM got crashed  error occurs being a programmer we cant do anythings and a program will be terminated abnormally
+System admin or Server admin is responsible to increase the heap memory.
+
+
+5.What is the super class for Exception and Error?
+Throwable--Throwable/Exception is the superclass of all the exception, if we dont known which exception occurs then use superclass exception
+6.Exceptions are defined in which java package
+java.io package
+8.Can we have try block without catch block?
+No
+9.Can we write multiple catch blocks under single try block?
+yes we can write multiple catch block with single try block but exception name should be child to parant
+10.How to write user defined exception or custom exception in java?
+11.What are the different ways to print exception message on console?
+>> getMessage() -- method to print the exception message / this method contain the error message available in java.lang package
+catch(Exception e){
+String s=e.getMessaage();
+}
+>> e.printStackTrace() -- method to print the message with exception
+12.What are the differences between final, finally and finalize in java?
+Final: keyword
+> Final is modifiers applicable for method, classes and variable
+>If a Variable declared as a Final then it will be constant and cant be reinitialized
+>If a method declared as a Final then we cant be redefined/override that method in the child class
+>If class declared as Final then we cant be extends that class, i.e we can not create child class for that class
+
+Finally: keyword 
+>Finally is a block always associated with try catch block to maintain cleanup code
+>It will get executed evenif exception occurs or not
+>Finally block will not get executed if programmer uses System.exist();
+
+Finalize:
+>This is method is present in object class
+>This method used to explicitily call the garbage collector
+> finalize() is a method which is always invoked by garbage collector just before destroying an object to perform cleanup activities
+***> Finally meant for cleanup activities related to try block whreas finalize() meant for cleanup activities related to object.
+
+13.Can we write return statement in try and catch blocks?
+14.Can we write return statement in finally block?
+15.What are the differences between throw and throws?
+Throw:
+Purpose: To handover our created exception object to the JVM maually
+>throw is used inside the method definition---mention inside the method 
+>only one throw can be used at a time
+>Explicitly throw an exception object
+>Throw an exception object to the JVM
+Throws:
+>We can declare more than one exception at a time---mention in method level
+>throws is used in method declaration
+>More than one throws used at a time
+>Implicitly throw an exception
+>Indicate the type of exception generated by method to caller
+
+16.What are the Exception Handling Keywords in Java?
+try- whenever exception will occurs we will try block
+Any code which throw an exception must be placed inside the the try block
+catch- Catch block is a block in which any are handeled inside the catch block
+solution block for the exception
+Catch block must be written after try block
+finally- Finally block is always be executed even if exception will occur or not
+Generally cleanup code is written inside the finally block
+
+17.Explain Java Exception Hierarchy?
+18.How to create custom Exception?
+57.What is the super class for Exception and Error?
+======================================================
+*Throwable
+*Exception
+58.Can we have try block without catch block?
+==============================================
+*No, we haven't try block without catch block.
+60.How to write user defined exception or custom exception in java?
+===================================================================
+access specifier method name throws customException {
+throw new customException();
+}
+61.What are the different ways to print exception message on console?
+=====================================================================
+*ref.printStackTrace() method is used to print the exception message from the console.
+64.Explain Java Exception Hierarchy?
+=====================================
+Exception
+1. Unchecked exception(Run time exception) 
+*ArithmaticException 
+*NullPointException 
+*InputMismatchException 
+*ArrayIndexOutOfBoundExcepion 
+*StringIndexOutOfBoundExcepion
+*IndexOutOfBoundExcepion
+*NumberFormatException
+2. Checked exception(Compile time exception)
+*IOException
+*SQLException
+*FileNotFoundException
+*ClassNotFoundException
+=========================================================================================Array==================================================================================================
+66.What is mean by array?
+==========================
+*Storing multiple values of similar datatype in a single variable.
+*Collection of similar data 
+*The value are stored based on index
+*The index will start 0 to n-1 
+
+67.What are the advantages and disadvantages of array?
+=======================================================
+Advantage:
+----------
+*In a snigle variable we can store multiple values.
+Disadvantages:
+--------------
+*It support only similar data types.
+*It is a fixed size one.
+*Memory wastage is high.
+68.Write a code to intialise array?
+===================================
+*Datatype refName[]= new Datatype[size];
+*Datatype[] refname={ };
+69.Can we change the memory size of array after intialization?
+=======================================================
+*No,we can't change the memory size of array after intialization.
+MCQ:
+In Java array are object.
+When you pass an array to a method, the method receives ________ .The reference of the array.
+===========================================================================Collection============================================================================================================
+List : size(), get(index), Remove(index),  add(val),add(index,val), set(index,val), indexof(val) - int, lastIndexof(), contains(val), clear(),  addAll(list1,list2), removeAll(), retainAll(),  
+java.lang.IndexOutOfBoundsException
+70.What is collection ?
+=======================
+*It will support dissimilar data types.
+*It is dynamic memory allocation.
+*No memory wastage like array.
+* java.util package
+71.What is the difference between ArrayList and Vector?
+=======================================================
+ArrayList:
+----------
+*Asynchronize
+*It is not a thread safe
+Vector:
+-------
+*Synchronize
+*Thread safe
+72.What is the difference between ArrayList and LinkedList?
+===========================================================
+LinkedList:
+-----------
+*Insertion and deletion is a best one.
+*Searching/retrieving is a worst.
+*It’s makes performance issue.
+ArrayList:
+----------
+*In Arraylist retrieve/searching is a best one
+*In ArrayList deletion and insertion is a worst one because if we delete/insert one index value after all the index move to forward/backward.
+*It makes performance issue.
+73.How to convert Array to List and List to Array?
+===================================================
+74.Describe the Collections type hierarchy ? What are the main interfaces ?
+===========================================================================
+Main Interface:
+---------------
+*List
+*Set
+*Map
+Hierarchy:
+-----------
+List:
+----
+*ArrayList
+*LinkedList
+*Vector
+Set:
+----
+*Hashset
+*LinkedHashSet
+*Treeset
+Map:
+----
+*HashMap
+*LinkedHashMap
+*Hashtable
+*TreeMap
+*ConcurrentHahMap
+75.What is difference between set and List?
+===========================================
+Set:
+----
+*It is a value based one.
+*It print in random order. *It won't allow duplicate.
+List:
+-----
+*It is a Index based one.
+*It print in insertion order.
+*It allow duplicate.
+76.What is the difference between HashSet and TreeSet ? 
+=======================================================
+HashSet:
+---------
+*It prints in random order.
+*HashSet allow one null value
+TreeSet:
+--------
+*It prints in insertion order.
+*TreeSet won't allow single Null value 
+77.How to convert List into Set?
+================================
+*By addAll() we can convert List into set.
+79.What is difference between Hash Map and Hash Table?
+=======================================================
+HashMap:
+--------
+*Key allows single null.
+*Asynchronies(not thread safe).
+Hashtable:
+----------
+*Key and value won't allow null.
+*Synchronize(thread safe).
+80.What is difference between set and Map?
+==========================================
+Set:
+---- 
+*It is a value based one.
+*It print in random order.
+*It won't allow duplicate.
+Map:
+----
+*It is key and value pair.
+*Here key+value is a one entry.
+*Key ignore the duplicate value and value allow the duplicate. 
+81.Can we iterator the list using normal for loop?
+==================================================
+*Yes,we can iterator the list using both normal and by using enhanced for loop.
+82.What are the methods available in list But not in set?
+=========================================================
+*indexOf();
+*get();
+set(index,value);
+add(index,value)
+*lastIndexOf();
+83.Explain about user defined Map?
+===================================
+*It is key and value pair.
+*Here key+value is a one entry.
+*Key ignore the duplicate value and value allow the duplicate. 
+84.How much null allows in below maps:
+HashMap :k?,v?
+LinkedHashMap:k?,v?
+TreeMap :k?,v?
+HashTable :k?,v?
+=======================================
+*HashMap :k-1 null,v- n null
+*LinkedHashMap:k-1 null,v- n null
+*TreeMap :k-ignore null,v-  n null
+*HashTable :k-ignore null,v- ignore null
+85.How to Iterate Map?
+======================
+*We can iterate the map by using entrySet() method.
+86.What is the return type of entrySet?
+=======================================
+*set<Entry>
+87.Write the methods to get the key only and value only?
+========================================================
+*For key only keySet() method is used. set
+*For value only values() method is used. collection
+
+2. What are the differences between Arrays and ArrayList?
+======================================================
+Arrays: 
+It store only similar datatype
+Once the size is declared it cant be changed
+ArrayList: 
+It store only similar and dissimilar datatype
+Size of array grows dynamically
+Allow null val
+
+ListIterator: 
+It is a interface which is used to iterate over the collection list interface classes(ArrayList,LinkedList,Vector)
+It can iterate in forward  as well as backward direction
+hasNext()  --m
+next()  --m
+hasPrivious()  --m
+privious()  --m
+*contain normal class and method
+*work on jdk after 1.4
+*remove method is available.
+*Backward direction is possible.
+ListIterator<Integer> listIterator = li.listIterator();
+Iterator:
+It is a interface which provides methods for iterator over the collection interface classes(ArrayList,LinkedList,Vector,HashSet,LinkedHashSet,TreeSet,HashMap,LinkedHashMap,TreeMap etc..)
+or it is applicable of all the collection classes.
+It can iterate only in forward direction
+hasNext()--m
+next()--m
+remove()--m
+*contain normal class and method
+*work on jdk after 1.4
+*remove method is available.
+*no Backward direction is possible.
+Iterator<Integer> iterator = li.iterator();
+
+Enumeration:
+--------------
+*It is a legecy interface and it is used before jdk version 1.4(old version).
+*contain legacy class and method
+*work on jdk before 1.4
+*no remove method is available.
+*no Backward direction is possible
+Enumeration<Integer> en = Collections.enumeration(al);
+		while (en.hasMoreElements()) {
+			Integer integer = (Integer) en.nextElement();
+			System.out.println(integer);
+		}
+Collections:C
+It is utility class available some of the functionality sort,min,max
+Collection: I
+It not included map
+It has list,set queqe,vector
+===============================================================================FileOperation===========================================================================
+88.What is mean by File? In which package it is available?
+==========================================================
+*File is a class and it is used to perform the file operation.
+*It is available in java.io package.
+89.What are the methods available in File ?
+===========================================
+*mkdir();To create folder -----Boolean
+*mkdirs();To create more than one folder at a time -----Boolean
+*list(); To print all the folder and file name   -----String[]
+*listFiles(); To print all path of the folder or file name, ---------File[]
+*createNewFile();IOException, To create new text File -----Boolean
+*isDirectory(); To check the folder created or not -----Boolean
+*exist(); Check folder present or not -----Boolean
+*isFile(); -----Boolean
+*isHidden();-----Boolean
+*delete();Delete the created folder -----Boolean 
+*canRead(); -----Boolean
+*canWrite(); -----Boolean
+*List<String> readLines = FileUtils.readLines(fileLoc);
+List<String> readLines = FileUtils.readLines(file);
+		String s = readLines.get(0);
+		System.out.println(s);
+		for (int i = 0; i < readLines.size(); i++) {
+			String s1 = readLines.get(i);
+			System.out.println(s1);}
+*		String str = FileUtils.readFileToString(file); To read all the text from file
+		System.out.println(str);
+		File des = new File("E:\\File_Operations\\Java\\kk.txt");
+		FileUtils.copyFile(file, des);
+*FileUtils.write(file, "\nhi greend technology",true);It will write in next line
+*FileUtils.write(file, "hi greend technology",true);It will write in same line
+
+90.While creating a file if we not mention the format then under which format it will save the file?
+=====================================================================================================
+*If we not mention the file format it will automatically take format as file.
+91.What are the difference between append and updating the file?
+================================================================
+For updating the file:
+---------------------
+It will replace the old content of file.
+For appending the file:
+-----------------------
+It will add the content at the end of file.
+
+====================================================================CONTROL STATEMENT=================================================================================
+Logical Operator:
+&&- If the first condition is failed it wont check the second condition and it will goes to else part directly.Both condition Should satisfied.
+||- If the first condition is true it wont check the second condition and it will goes to if part directly. Anyone condition Should satisfied.
+Bitwise Operator:
+&- Eventhough the first condition is failed it will check the second condition and goes to else part directly
+|- Eventhough the first condition is true it will check the second condition and goes to if part directly
+
+1.What is difference between break and continue?
+Break: 
+> It comes out the current loop once the condition satisfied.(Means it terminate that line program it will not execute next line)
+> Used with for,while,dowhile,switch
+Continue:
+>It will skip the particular iteration and continue next iteration
+>Con not Use with switch,if
+
+2.Whether we can use continue statement in switch?
+No
+3.What is mean by control statments and types?
+Control statement is a order of execution in a progarm based on data value and conditional logic.
+Types:
+if Stmt:If the if condition is true than only if body or business logic will execute or else if condition false then the stmt after the if block will execute.
+         we can not use break and continue stmt in if stmt
+if else Stmt:If the if condition is true than only if body or business logic will execute or else if condition false the else body will execute
+switch Stmt:When there are multiple condition present it will check particular mention case lebel directly and execute
+=============================================================================================Loop Stmt=============================================================================
+4.What is mean by for loop?
+Loop: A loop statement is a repetative block of java stmt executed in a conditional manner
+for loop is a control flow statement for specifying iteration, which allows code to be executed repeatedly
+5.Can you explain about for loop execution process?
+for(initialization; cond_expression;incre/decre){
+//business logic
+}
+6.What is difference between while and do-while?
+while:
+>It is entry level condition checking i.e only condition is true then it will execute
+while(cond){
+business logic
+incre/decre
+}
+do while:
+>It is exist level condition checking that means it execute atleast once than check for condition
+do{
+business logic
+incre/decre
+}
+while(cond);
+7.What is the use of default keyword in switch?
+If the switch statement did not meet the condition then default keyword will execute
+If switch stmt execute then default will not execute
+8.Difference between for and while loop?
+for loop: 
+>for loop is a control flow statement for specifying iteration, which allows code to be executed repeatedly
+> definite number of iteration or limited number of iteration
+while loop: 
+> It is entry level condition checking i.e only condition is true then it will execute
+>The while loop is used to perform an indefinite number of iterations, as long as a certain condition remains true
+The while loop is used to repeat a section of code an unknown number of times until a specific condition is met
+96.What are control statement?
+===============================
+*Statement which has control over the loop or program is called control statements.
+A Statement which has control over the flow of execution of program based on certain conditions. 
+*Example:if,if else.
+97.What are the difference between break and continue
+===================================
+Break:
+------
+*It will terminate where the condition become true.
+*It will not used inside the loop other than switch case.
+for,while,do while,switch
+Continue:
+----------
+*It will skip the condition become true and keep executing the loop.
+*It will not used inside the loop
+while and do while
+===================
+While:
+------
+*It is entry check loop.
+Do While:
+---------
+*It is a exit check loop.
+if and if else
+===============
+if
+--
+*execute only when the condition become true.
+if else
+--------
+*execute the else part when then condition become false and execute if part when condition become true.
+==============================================================================================================================================================================================
+3. What is mutable and immutable string?
+Immutable:
+>eg-String
+>We can store more duplicate value in same memory
+>We can't change the value in memory automatically if we want to change value/memory we need to give memory reference
+>Use concat() method to add two String
+>If we join two string (different) it will store different memory location or new memory location
+>The immutable string store memory in string pool or string constant
+Mutable:
+>eg-String builder and String buffer
+>We can't store duplicate value in same memory,It will store in differrent memory location
+>We can change the value in memory
+>Use append() method to add two string
+>If we join two string (different) it will store in the first memory location
+>It will store in heap memory
+
+8. Difference between method overloading and method overriding?
+Method overloading:In a class having multiple methods a same method name and different parameter list/argument is called as MOL.
+the argument depends on datatype,datatype count/number,datatype order
+>No return type check
+>Static method can be overloaded
+>Final method can be overloaded
+>No inheritance required
+Method overriding:If a subclass having a method with name,same parameter list and same return type as that of a super class method called as MR
+If i am not satisfy my superclass thenwe go for method overriding and writting new business logic in childclass
+>Return type is same in the subclass method and superclass method
+>Static method can not be overriden but they can redefined
+>Final method can not be overriden
+> inheritance required to acheive Method overriding
+
+9.Difference between Abstract class and Interface?
+Abstract class:
+>It is a partial abstraction
+>It conatins both abstract and non-abstract method
+>Abstract class using extends keyword
+>Here public abstract have to mention
+>here we con use whatever access  specifier we want
+
+Interface:
+>It is fully abstraction
+>It contain only abstract method
+>Interface using implements keyword
+>here public abstract is default and no need to mention
+>here use only public access  specifier
+
+1.What is mean by polymorphism?
+poly---many
+morphism---forms
+Executing methods in more than one forms
+An object having different behaviour in its life cycle is called as polymorphism.
+
+2.Difference between method overloading and method overriding?
+Method overloading:In a class having multiple methods a same method name and different parameter list/argument is called as MOL.
+the argument depends on datatype,datatype count/number,datatype order
+>No return type check
+>Static method can be overloaded
+>Final method can be overloaded
+Method overriding:If a subclass having a method with name,same parameter list and same return type as that of a super class method called as MR
+If i am not satisfy my superclass thenwe go for method overriding and writting new business logic in childclass
+>Return type is same in the subclass method and superclass method
+>Static method can not be overriden but they can redefined
+>Final method can not be overriden
+
+3.What is mean by Abstraction?
+Abstrction is process in wich a class implementaton or method impletation is hidden and object functionality is exposed.
+Hidding the implementation details or logic
+5.What is mean by abstract method?
+Abstract method is method which has no business logic.If a class contain a abstract method  than it has to be declare as abstract.
+
+6.Can we create object for abstract class?
+No
+7.In interface,can we make method as static?
+8.In interface,can we make method as final?
+No
+9.How will achieve multiple inheritance in java,write a code for that?
+Interface can extends more than one interface
+interface A{}
+interface B{}
+interface C extends A,B{}
+
+2.Types of inheritance and explain all types?
+i> Single Inheritance: In single inheritance having one parant class and one child class
+   One parant class directly support into a child class using extends keyword
+   We need to create an object for child class then only we can access both parant and child class
+ii>Multilevel Inheritance: The combination of one child class and more than one parant class support at a tree level structure
+   Kind of looping a single inheritance is Multilevel inheritance
+iii>Multiple Inheritance: More than one parant class parally support one child class
+iv> Hierarchical Inheritance: When more than one class inherits same class same class is called as hierarchical inheritance
+v> Hybrid Inheritance: The combination of more than one type inheritance
+
+3.What is mean by multiple inheritance,why java won't support multiple inheritance?
+More than one parant class parally support one child class
+Multiple inheritance wont support in java due to syntax and compile error.this is also known as diamond problem or deadlock
+JVM get confused on which class to call first
+4.Difference between hybrid and hierachical inheritance?
+
+5.What is the use of access specifier and types?
+Access modifiers (or access specifiers) are keywords in object-oriented languages that set the accessibility of classes, methods, 
+and other members. A class cannot be declared as private.
+types:
+Public: public access modifiers can be access by the class of same package and also access by the claas present in different package
+Protected: It can be access by the class within the package
+           It can be access by the class present in another package by inheriting to the class containing protected members in anaother package
+           class MainClass extends protectedModifiers
+private:It is class level access. It can only be access within the class
+        It can not be access from another class or from another package
+defalt: It is package level access.It can be access by the class within the package
+         It can not be access from the class present in another package
+
+6.Difference between public and protected?
+Public: public access modifiers can be access by the class of same package and also access by the claas present in different package
+Protected: It can be access by the class within the package
+           It can be access by the class present in another package by inheriting to the class containing protected members in anaother package
+           class MainClass extends protectedModifiers
+
+7.What is mean by Wrapper class?
+classes of data types is called as wrapper class
+Wrapper class will be used in collection class
+
+9.What is difference between primitive and non primitive datatypes?
+
+12.What is use of scanner class?
+To get the input from the user at rum time
+It is present in java.util package
+
+13.What are the different methods available in Scanner class?
+Scanner class methods:
+nextInt()
+nextByte()
+nextShort()
+nextFloat()
+nextLong()
+nextDouble()
+nextBoolean()
+next()---Not accept the space
+nextLine()---Accept the space
+
+15.Difference between next() and nextLine()?
+next()---Not accept the space
+nextLine()---Accept the space
+
+Java provides a number of non-access modifiers to achieve many other functionalities.
+The static modifier for creating class methods and variables.
+The final modifier for finalizing the implementations of classes, methods, and variables.
+The abstract modifier for creating abstract classes and methods.
+
+
+1.What is mean by inheritance?
+Creating an multiple object is not best practice in java
+We are accessing one class property or methods in another class using extends keyword and reusable purpose
+Adv: Memory wastage is low,Reusable purpose
+Every class in java extends to superclass called as object class
+
+============================================Escape Sequence ===============================
+\n	Newline
+\r	Carriage return
+\f	Formfeed
+\b	Backspace
+\s	Space
+\t	Table
+\"	Double quotes
+\'	Single quotes
+\\	backslash
+\ddd	Octal character
+\uxxx	Hexadecimal UNICODE character
+
+=============================Java String Format Specifiers============
+Format Specifiers	Datatypes	Output
+%d-	integer (incl. byte, short, int, long, bigint) -	Decimal Integer
+%n	- none	-  Platform-specific line separator.
+%s	- any type -	String value
+
+
+
+

@@ -1,0 +1,16 @@
+<testsuite failures="0" name="com/sample/rest/apis/GetUserPaymentDetailAfterDeleted.feature" skipped="0" tests="1" time="17.377637">
+  <testcase classname="com.sample.rest.apis.GetUserPaymentDetailAfterDeleted" name="Get deleted user payment details by Id of REST APIs" time="17.377637">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:com/sample/rest/apis/GetAllPaymentDetails.feature') . passed
+* call read('classpath:com/sample/rest/apis/CreateNewUserPayment.feature') . passed
+* call read('classpath:com/sample/rest/apis/GetCreatedUserPaymentById.feature') . passed
+* call read('classpath:com/sample/rest/apis/ModifyCreatedUserPayment.feature') . passed
+* call read('classpath:com/sample/rest/apis/PatchCreatedUserPayment.feature') . passed
+* call read('classpath:com/sample/rest/apis/DeleteCreatedUserPayment.feature') . passed
+Given url 'https://sample-4e6d.restdb.io/rest/payments/'+id ............... passed
+And header x-apikey = '9677194df0cd556c1bb2f9aeee86c7e218482' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'response : '+response ............................................ passed</system-out>
+  </testcase>
+</testsuite>

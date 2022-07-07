@@ -1,0 +1,66 @@
+Q. How will you handle a webtable
+Q.How to handle dynamic webtable
+Q. What is selenium Grid
+Q. Can you keep your testdata as hardcode?
+Dynamic content how will you handle it
+
+Q. Improvment in your project
+Q.Third party report and cutomized report
+Q.How will you prepare RTM Report
+Q.Preparing 400 testcase how much time will take
+Q.Pocker cart technique
+Q.Abstract class and inerface where you used in your project
+Q.If we are working in 20 sprint, consider 10 to 15 day for particular sprint 
+  so what will be your status daily about your 20th sprint.
+Q.Assert title  but(smg) browser windows 
+Q. ArrayList and LinkedList
+Q.How to convert Array to List and List to Array?
+M1 : List<String> li=new ArrayList<String>();
+		Collections.addAll(li, s);
+M2: List<String> asList = Arrays.asList(s);
+M3: Create ArrayLIst, Iterate array and add value in list by using add() method
+M1: List<String> li=new ArrayList<>();
+		li.add("asd");
+		li.add("sdsdcs");
+		li.add("iouo");
+		li.add("neiuh");
+		String[] s=new String[li.size()];
+		String[] array = li.toArray(s);
+or String string = li.toString();
+		System.out.println(string);
+or
+for (int i = 0; i < li.size(); i++) {
+			s[i]=li.get(i);
+		}
+		for (String str : s) {
+			System.out.println(str+" ");
+		}
+Q Why using getters and setters
+Q. why using constructor in pom
+Q.WHAT IS YOUR VERIFICATION TOOL
+Q.Write positive and negative scenario for dropdown list.
+Q Welocome to mphasis:  elcomeW ot phasism
+Q.Manually created interface in your project?
+Q.How extend report created
+Q.missing number in the following sequences i/p: -1,0,1,3,5 ||o/p: 2,4
+
+Q. What is the starting point of execution in jenkins
+Ans: From build path of the project, it will start to run.
+Q.examples of predefined methods
+Q. 10 keywords in java
+Ans: Total 51 keywords in that 2 not in use(goto,const)
+
+Q. can you create your own webDriver tool?
+Yes
+
+Company Info
+Websitehttp://www.bigsteptech.com
+Contact PersonShweta
+Phone Number9958848617
+Emailcareers@bigsteptech.com
+
+Company Info
+Websitehttps://www.imoneywallet.in
+Contact PersonAnurag
+Phone Number9990427536
+Emailhr@i-money.co.in

@@ -1,0 +1,254 @@
+Q.Enumerator and iterator methods and differences?
+Enumeration,Iterator,List Iterator these are used to iterate the collection.
+Enumerator,Iterator and list Iterator:
+-------------------------------------------
+1.Enumerator:
+---------------
+-->We can iterate only legacy classes or legacy interfaces(introduced in jdk 1.2)
+Eg for legacy classes:Vector,HashTable
+-->Traverse only in forward direction.
+
+Vector(Classname)
+Methods:elements()---->return type Enumeration(Interface)
+
+Interface:Enumeration
+Methods:hasMoreElements(),nextElement()
+
+2.List Iterator:
+--------------
+-->We can only use for " List " type classes(Linkedlist,Arraylist)
+-->Traverse in forward as well as backward direction.
+
+List:Interface
+method:listIterator()
+
+ListIterator:Interface
+Methods:hasNext(),hasPrevious(),next(),previous(),remove()
+
+3.Iterator:
+-----------
+-->We can use "Iterator" for all the collection classes
+-->Traverse only in forward direction
+-->we can use remove() method
+
+Iterator:Interface
+Methods:hasNext(),next(),remove()
+
+Q.How will you handle pop-ups
+
+Disable windows based Pop-us:
+-------------------------------------
+ChromeOptions options=new ChromeOptions();
+options.addArgumenxts("--disable-notifications");
+
+
+Waits:
+------
+Fluent wait syntax
+
+Fluent waits---TimeOutException
+
+Exception hierarchy:
+------------------------
+Object-->Throwable-->Exception
+
+How to download maven offline-
+---------------------------------------
+In command prompt, From your maven project  path-->mvn dependency:go-offline
+ 
+Extents report-cucumber:
+------------------------------
+->We can set multiple system properities to report.
+-->Can add screenshot to failed scenarios
+-->Add logging to your reports
+
+For using Cucumber extents report-->u need ExtentReport v3.0.6 dependency(If u are using java 8+)
+
+Class:Reporter
+
+Steps:
+-------
+1.After adding dependency to POM.xml-->update maven project--->create extentconfig.xml-->Read the extentConfig.xml--->Modify TestRunner class--->run as JUnit
+
+TestRunner.java:
+-------------------
+@RunWith(Cucumber.class)
+@CucumberOptions(feature={},glue={},plugin={"com.Cucumber.listener.ExtentCucumberFormatter:target
+/cucumber-reports/reports.html"})
+Public class TestRunner
+{
+}
+@AfterClass
+Public static void writeExtentReport()
+{
+Reporter.loadXMLConfig(new File(FileReadManager)........)
+}
+
+
+Q.What is stack---data structure with Last In First Out
+Q.What is queue-->data structure with First in first out
+
+
+Q.How will you upload a file using robot class
+
+File uploading using robot class:
+---------------------------------------
+
+StringSelection is a "convenience" class that can be used for copy and paste operations on Unicode text strings. 
+For example, you could place a string on the system's clipboard with the following code: 
+
+
+Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard(); 
+StringSelection s = new StringSelection( "Be safe when you cut and paste."); 
+c.setContents(s, s); 
+
+
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.awt.*;
+import org.openqa.selenium.By;
+himport org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class FileUpload {
+ 
+@Test
+public void Fileupload() throws AWTException, InterruptedException{
+ 
+
+// Start browser
+ WebDriver driver = new FirefoxDriver();
+
+// maximize browser
+ driver.manage().window().maximize();
+        
+  // Specify the file location with extension
+ StringSelection sel = new StringSelection("C:\\Users\\Desktop\\1.doc");
+
+   // Copy to clipboard
+ Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
+ System.out.println("selection" +sel);
+ 
+
+// Open Monster.com
+ driver.get("http://my.monsterindia.com/create_account.html");
+ Thread.sleep(2000);
+
+ // This will scroll down the page 
+ JavascriptExecutor js = (JavascriptExecutor)driver;
+ js.executeScript("scroll(0,350)");
+
+// Wait for 5 seconds
+ Thread.sleep(5000);
+
+// This will click on Browse button
+ driver.findElement(By.id("wordresume")).click();
+
+
+
+ System.out.println("Browse button clicked");
+
+ // Create object of Robot class
+ Robot robot = new Robot();
+ Thread.sleep(1000);
+      
+  // Press Enter
+ robot.keyPress(KeyEvent.VK_ENTER);
+
+// Release Enter
+ robot.keyRelease(KeyEvent.VK_ENTER);
+
+  // Press CTRL+V
+ robot.keyPress(KeyEvent.VK_CONTROL);
+ robot.keyPress(KeyEvent.VK_V);
+
+// Release CTRL+V
+ robot.keyRelease(KeyEvent.VK_CONTROL);
+ robot.keyRelease(KeyEvent.VK_V);
+ Thread.sleep(1000);
+        
+ //Press Enter 
+ robot.keyPress(KeyEvent.VK_ENTER);
+ robot.keyRelease(KeyEvent.VK_ENTER);
+
+}
+
+}
+
+SELENIUM COMPONENTS:
+-----------------------------------
+
+Selenium IDE:
+-----------------
+supports only on Mozilla firefox
+
+Selenium RC:
+----------------
+-->earlier known as Javascript executor.
+-->Supported multiple languages and multiple browsers like mozilla,chrome,ie
+-->also known as Selenium 1
+-->There will be a component called "Selenium server" which acts as intermediary between our program and browser.
+(Code lines sent to server -->interprets the command -->converts in to javascript-->inject into browser-->browser executes js-->
+responds to server-->server interprets the command-->returns to code in respective language)
+
+Selenium WebDriver:
+--------------------------
+-->opensource
+-->Supports all main browsers
+-->Supports multiple languages(C#,Java,RUBY,Perl,Python,PHP)
+-->Supports multiple platforms(Windows,LINUX,Mac etc)
+-->There is no intermediary server--program code directly interacts with the browser.
+-->East to integrate with testing frameworks
+
+Selenium GRID:
+--------------------
+-->It has Hub(Central) and Nodes(In every node we can set different platforms(OS))
+-->It allows us to execute the same scripts(entered in hub) on different machines(nodes) at sametime.
+
+Hashmap internal mechanism:
+------------------------------------
+-->works on Hashing Principle
+It uses hashCode() method----returns the memory reference of object in integer form.
+
+MAP concepts:
+------------------
+
+what is main thread(When u run a java program,that program is considered as main thread)
+
+runnable Interface in java:
+-------------------------------
+java.lang.Runnable is an interface that is to be implemented by a class whose instances are intended to executed by a thread.
+
+For eg:
+--------
+public class classname implements Runnable
+
+desired capability(System.setProperty())
+
+Mobile Testng:
+------------------------
+Mobile testing(Hybrid----We will install Android studio APM and we will set the desired cababilities)
+
+In APPium we will test Android devices as well as IOS which we will connecting in cloud and configuration.
+
+API testing?
+-----------------------
+API testing we have (SOAP UI (paid version) or REST API(non paid one --manually we can do)---reg Http Request,HttpResponse)
+
+
+Thread.sleep will throw which exception?
+
+Answer:
+-----------------
+Thread.sleep()--->Interrupted exception
+
+
+Does Set allow null value?
+---------------------------------
+Ans:accept only one null value
+
+Array to ArrayList conversion:
+------------------------------------
+Arrays.asList() method

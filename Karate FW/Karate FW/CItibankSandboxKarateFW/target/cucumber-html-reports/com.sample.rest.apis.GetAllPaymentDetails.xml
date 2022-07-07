@@ -1,0 +1,10 @@
+<testsuite failures="0" name="com/sample/rest/apis/GetAllPaymentDetails.feature" skipped="0" tests="1" time="2.931965">
+  <testcase classname="com.sample.rest.apis.GetAllPaymentDetails" name="Fetch all user payment details of REST APIs" time="2.931965">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+Given url 'https://sample-4e6d.restdb.io/rest/payments' ................... passed
+And header x-apikey = '9677194df0cd556c1bb2f9aeee86c7e218482' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'response : '+response ............................................ passed</system-out>
+  </testcase>
+</testsuite>

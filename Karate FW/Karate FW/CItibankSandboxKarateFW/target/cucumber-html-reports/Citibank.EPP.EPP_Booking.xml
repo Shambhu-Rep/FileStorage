@@ -1,0 +1,30 @@
+<testsuite failures="1" name="Citibank/EPP/EPP_Booking.feature" skipped="0" tests="1" time="3.989353">
+  <testcase classname="Citibank.EPP.EPP_Booking" name="check monthly payment plan schedule" time="3.989353">
+    <failure message="EPP_Booking.feature:9 - &#10;CardAuthorization.feature:18 - &#10;java.net.UnknownHostException: qa.sandbox.apihub.citi.com">* call read('classpath:reusable.feature') ................................. passed
+* def eppBookingPayload = read('classpath:Citibank/EPP/EPP_BookingPayload.json') . passed
+* call read('classpath:Citibank/EPP/CardAuthorization.feature') ........... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: EPP_Booking.feature:9 - 
+CardAuthorization.feature:18 - 
+java.net.UnknownHostException: qa.sandbox.apihub.citi.com&#13;
+	at ✽.* call read('classpath:Citibank/EPP/CardAuthorization.feature') (EPP_Booking.feature:9)&#13;
+
+* call read('classpath:Citibank/EPP/CardAuthorizationAccessToken.feature') . skipped
+* call read('classpath:Citibank/EPP/RefreshAccessToken.feature') .......... skipped
+* call read('classpath:Citibank/EPP/RevokeToken.feature') ................. skipped
+* call read('classpath:Citibank/EPP/EPP_Plan.feature') .................... skipped
+* call read('classpath:Citibank/EPP/EPPMonthlyRepayment.feature') ......... skipped
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/v1/creditCards/'+cardid+'/easyPaymentPlans/bookings' . skipped
+And header Authorization = access_token ................................... skipped
+And header client_id = '1ad0185b-50f2-4f21-8ac3-f342e4706e7e' ............. skipped
+And header uuid = randomString(20) ........................................ skipped
+And header Accept = 'application/json' .................................... skipped
+And header Content-Type = 'application/json' .............................. skipped
+And request eppBookingPayload ............................................. skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* print '********* EPP Booked *********' .................................. skipped</failure>
+  </testcase>
+</testsuite>
